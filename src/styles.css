@@ -1,4 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* 1. Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+2. Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+3. Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+4. Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+5. Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+6. White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
+
+.dark-blue-bg {
+    /*1*/
+    background-color: hsl(209, 23%, 22%);
+}
+
+.very-dark-blue-bg {
+    /*2*/
+    background-color: hsl(207, 26%, 17%);
+}
+
+.light-mode-text {
+    /*3*/
+    color: hsl(200, 15%, 8%);
+}
+
+.dark-gray-color {
+    /*4*/
+    background-color: hsl(209, 23%, 22%);
+}
+
+.light-mode-bg {
+    /*5*/
+    background-color: hsl(0, 0%, 52%);
+}
+
+.white-color {
+    /*6*/
+    color: hsl(0, 0%, 100%);
+}
+
+.white-bg {
+    /*6*/
+    background-color: hsl(0, 0%, 100%);
+}

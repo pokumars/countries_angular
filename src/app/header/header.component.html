@@ -1,9 +1,15 @@
-<p>header works!</p>
-<div class="header-container">
-    <span class="header-logo">Where in the world? </span>
-    <button mat-button (click)="toggleDarkLightMode()">
-        <mat-icon>{{this.nextDarkLiteMode.icon}}</mat-icon>
-        {{ this.nextDarkLiteMode.name }} mode
+<div class="header-container" [ngClass]="currentDarkLiteMode.name === 'light' ? 'white-bg' : 'dark-blue-bg'">
+    <span class="header-logo" [ngClass]="currentDarkLiteMode.name === 'light' ? 'light-mode-text' : 'white-color'">Where
+        in the world? </span>
 
+    <button class="darkness-mode-btn"
+        [ngClass]="currentDarkLiteMode.name === 'light' ? 'white-bg light-mode-text ' : 'white-color dark-blue-bg'"
+        mat-flat-button (click)="toggleDarkLightMode()" style="display: inline-flex;">
+        <mat-icon>{{ this.nextDarkLiteMode.icon }}</mat-icon>
+        <span style="padding-left: 8px;">
+            {{ this.utilityFxnsService.capitaliseFirstLetter(
+            this.nextDarkLiteMode.name
+            ) }} Mode
+        </span>
     </button>
 </div>
