@@ -8,18 +8,27 @@ import { UtilityFxnsService } from './services/utility-fxns.service';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { ThemeService } from './services/theme.service';
+import { InputsComponent } from './inputs/inputs.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    InputsComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NoopAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      delay: 1000
+    })
   ],
   providers: [UtilityFxnsService, ThemeService],
   bootstrap: [AppComponent]
